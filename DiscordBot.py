@@ -18,7 +18,6 @@ async def on_read():
 async def on_message_edit(before, after):
     if after.content:
         bot.say("{} just edited his message.".format(author))
-        #'**{}** in channel `#{}` edited their message:\nFrom: {}\nTo: {}'.format(after.author.name, after.channel.name, before.content, after.content))
 
 
 #   Commands
@@ -39,4 +38,7 @@ async def echo(message):
 
 print("[x] Running")
 bot.run(user_token)
-#https://discordapp.com/oauth2/authorize?client_id=YOUR_ID_HERE&scope=bot&permissions=0
+
+# For inviting the bot to the channel use:
+# https://discordapp.com/oauth2/authorize?client_id=YOUR_ID_HERE&scope=bot&permissions=0
+# The Client ID can be found on the same page as token
