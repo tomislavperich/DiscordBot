@@ -5,9 +5,9 @@
 2. [Discord API wrapper](https://github.com/Rapptz/discord.py)
 
     or use
-    ```bash
-    python pip -m install discord.py
-    ```
+```bash
+python pip -m install discord.py
+```
 
 ## Usage
 1. Acquire an access token
