@@ -21,7 +21,7 @@ async def on_ready():
     # Hello world
 @bot.command()
 async def hello(*args):
-    if str(args) == "()":
+    if str(args) == "()"
         return await bot.say("Hello, world!")
     else:
         return await bot.say("Hello, {}!".format(*args))
@@ -68,6 +68,7 @@ async def poopandclap():
 
 print("[ ] Running")
 bot.run(user_token)
+
 
 # For inviting the bot to the channel use:
 # https://discordapp.com/oauth2/authorize?client_id=YOUR_ID_HERE&scope=bot&permissions=0
