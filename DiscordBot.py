@@ -6,19 +6,14 @@ bot = Bot(command_prefix="!")
 current_time = dt.now().strftime('%H:%M:%S')
 current_date = dt.now().strftime('%Y-%m-%d')
 
-user_token = "YOUR TOKEN HERE"
+token_file = open("user_token.txt")
+user_token = token_file.read()
 
 
 #   Events
 @bot.event
 async def on_ready():
     print("[x] Online")
-
-# Message edit notice to be finished
-# @bot.event
-# async def on_message_edit(before, after):
-#     return await bot.say("Old: {}\nNew: {}".format(before, after))
-        #'**{}** in channel `#{}` edited their message:\nFrom: {}\nTo: {}'.format(after.author.name, after.channel.name, before.content, after.content))
 
 
 # Commands
@@ -59,7 +54,19 @@ async def roll(*args):
     numbers = "".join(str(rand_numbers))
     return await bot.say("You rolled: {}".format(numbers[1:-1]))
 
-print("[ ] Starting")
+    # You're right
+@bot.command()
+async def amiright():
+    return await bot.say("You're totally right.")
+
+    # r6 eric: I would rather poop in my hands and clap than have AMD
+    # INTEL FTW
+@bot.command()
+async def poopandclap():
+    return await bot.say(":poop: :clap:")
+
+
+print("[ ] Running")
 bot.run(user_token)
 
 # For inviting the bot to the channel use:
