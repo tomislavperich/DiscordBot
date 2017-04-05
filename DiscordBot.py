@@ -1,4 +1,4 @@
-import discord, datetime
+import discord, datetime, random
 from discord.ext.commands import Bot
 from datetime import datetime as dt
 
@@ -45,6 +45,19 @@ async def echo(*args):
         say_this += i + " "
     return await bot.say(say_this)
 
+    # Roll the dice
+@bot.command()
+async def roll(*args):
+    rand_numbers = []
+    if str(args) == "()":
+        rand_numbers.append(random.randint(1,6))
+    elif not int(*args) >= 6:
+        for i in range(int(*args)):
+            rand_numbers.append(random.randint(1,6))
+    else:
+        for i in range(6):.append(random.randint(1,6))
+    numbers = "".join(str(rand_numbers))
+    return await bot.say("You rolled: {}".format(numbers[1:-1]))
 
 print("[ ] Starting")
 bot.run(user_token)
