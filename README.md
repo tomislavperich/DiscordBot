@@ -15,4 +15,5 @@ python pip -m install discord.py
       - Create an app on Discord
       - Convert app to user
       - Copy the token to code
+
 2. Run DiscordBot.py
