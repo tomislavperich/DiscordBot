@@ -69,7 +69,6 @@ async def poopandclap():
 print("[ ] Running")
 bot.run(user_token)
 
-
 # For inviting the bot to the channel use:
 # https://discordapp.com/oauth2/authorize?client_id=YOUR_ID_HERE&scope=bot&permissions=0
 # The Client ID can be found on the same page as token
