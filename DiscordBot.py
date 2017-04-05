@@ -11,19 +11,25 @@ user_token = "YOUR TOKEN HERE"
 
 #   Events
 @bot.event
-async def on_read():
-    print("Client logged in")
+async def on_ready():
+    print("[x] Online")
 
-@bot.event
-async def on_message_edit(before, after):
-    if after.content:
-        bot.say("{} just edited his message.".format(author))
+# Message edit notice to be finished
+# @bot.event
+# async def on_message_edit(before, after):
+#     return await bot.say("Old: {}\nNew: {}".format(before, after))
+        #'**{}** in channel `#{}` edited their message:\nFrom: {}\nTo: {}'.format(after.author.name, after.channel.name, before.content, after.content))
 
 
-#   Commands
+# Commands
+
+    # Hello world
 @bot.command()
 async def hello(*args):
-    return await bot.say("Hello, world!")
+    if str(args) == "()":
+        return await bot.say("Hello, world!")
+    else:
+        return await bot.say("Hello, {}!".format(*args))
 
 @bot.command()
 async def time():
@@ -35,8 +41,7 @@ async def echo(message):
     return await bot.say(message)
 
 
-
-print("[x] Running")
+print("[ ] Starting")
 bot.run(user_token)
 
 # For inviting the bot to the channel use:
