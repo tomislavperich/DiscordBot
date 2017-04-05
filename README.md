@@ -11,7 +11,7 @@ python pip -m install discord.py
 
 ## Usage
 1. Acquire an access token
-      - Create an account Discord
+      - Create an account on Discord
       - Create an app on Discord
       - Convert app to user
       - Copy the token to code
