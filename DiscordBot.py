@@ -31,14 +31,19 @@ async def hello(*args):
     else:
         return await bot.say("Hello, {}!".format(*args))
 
+    # Time and date
 @bot.command()
 async def time():
     return await bot.say("The time is: {}\nThe date is: {}"\
     .format(current_time,current_date))
 
+    # Echo
 @bot.command()
-async def echo(message):
-    return await bot.say(message)
+async def echo(*args):
+    say_this = ""
+    for i in args:
+        say_this += i + " "
+    return await bot.say(say_this)
 
 
 print("[ ] Starting")
