@@ -65,7 +65,6 @@ async def amiright():
 async def poopandclap():
     return await bot.say(":poop: :clap:")
 
-
 print("[ ] Running")
 bot.run(user_token)
 
